@@ -34,6 +34,11 @@ android {
             "GRAPH_HOPPER_API_KEY",
             "\"${localProperties.getProperty("GRAPH_HOPPER_API_KEY") ?: ""}\""
         )
+        buildConfigField(
+            "String",
+            "OPEN_WEATHER_MAP_API_KEY",
+            "\"${localProperties.getProperty("OPEN_WEATHER_MAP_API_KEY") ?: ""}\""
+        )
     }
 
 
@@ -68,6 +73,8 @@ dependencies {
     implementation("org.maplibre.gl:android-sdk:11.5.0")
     implementation("com.google.android.gms:play-services-location:21.3.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("org.apache.commons:commons-compress:1.27.1")
+    implementation("org.locationtech.jts:jts-core:1.20.0")
 
     testImplementation(libs.junit)
 
